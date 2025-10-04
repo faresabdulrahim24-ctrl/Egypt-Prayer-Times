@@ -1,0 +1,259 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #273F4F;
+  background: #225175;
+  background: linear-gradient(45deg, rgba(34, 81, 117, 1) 0%, rgba(31, 0, 89, 1) 50%, rgba(46, 0, 92, 1) 100%);
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #0097a7;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #0097a7;
+  margin: 8px auto 0;
+  border-radius: 5px;
+}
+
+#today {
+  font-family: "Tajawal", sans-serif;
+  font-size: 18px;
+  font-weight: bold; 
+  color: #00bcd4; 
+  text-align: center;
+  background-color: #1F3B4D; 
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
+  letter-spacing: 1px; 
+  display: inline-block; 
+  min-width: 220px; 
+}
+
+#remaining-time {
+    background: #447D9B;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    width: auto;
+    min-width: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+#remaining-time .label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+#remaining-time #next-pray {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFD700;
+}
+
+#remaining-time .time {
+    margin-top: 5px;
+    font-size: 16px;
+}#remaining-time {
+    background: #447D9B;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    width: fit-content;
+}
+
+#remaining-time .label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+#remaining-time #next-pray {
+    font-size: 20px;
+    font-weight: 600;
+    color:  white;
+}
+
+#remaining-time .time {
+    margin-top: 5px;
+    font-size: 16px;
+}
+#remaining-time:hover{
+  transform: scale(1.05);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+  justify-content: center;
+  font-family: 'Tajawal', sans-serif;
+}
+
+.Assumptions {
+  font-family: "Tajawal", sans-serif;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.Assumptions div {
+  background-color: #447D9B;
+  color: white;
+  width: 130px;
+  height: 100px; 
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background-color 0.3s;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Assumptions div:hover {
+  transform: scale(1.05);
+}
+
+.Assumptions p {
+  margin: 3px 0; 
+  line-height: 1.2; 
+}
+
+.prayer-time {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-top: 3px; 
+}
+
+.city {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 10px;
+}
+
+.city select {
+  padding: 12px 20px;
+  border: 2px solid #00bcd4;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 240px;
+  text-align: center;
+  background-color: #1F3B4D; 
+  color: #e0f7fa; /* لون النص */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3); 
+  cursor: pointer;
+  appearance: none; /* لإزالة السهم الافتراضي (ممكن تشيله لو عايز السهم يظهر) */
+}
+
+.city select:focus {
+  border-color: #0097a7;
+  box-shadow: 0 0 12px rgba(0, 151, 167, 0.5);
+  background-color: #1a3340;
+}
+
+.city option {
+  background-color: #1F3B4D;
+  color: #e0f7fa;
+  padding: 10px;
+}
+
+#lang-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #0097a7;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+#lang-toggle:hover {
+  background-color: #00bcd4;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .Assumptions {
+      gap: 8px;
+  }
+
+  .Assumptions div {
+      width: 100px;
+      height: 70px;
+      font-size: 16px;
+  }
+
+  .prayer-time {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Assumptions {
+      gap: 5px;
+  }
+
+  .Assumptions div {
+      width: 85px;
+      height: 65px;
+      font-size: 14px;
+  }
+
+  .prayer-time {
+      font-size: 12px;
+  }
+}

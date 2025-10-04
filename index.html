@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <title>prayer times</title>
+</head>
+<body>
+    <h2>prayer times</h2>
+    <div class="content">
+        
+        <div class="date">
+            <div>
+                <p id="today"></p>
+            </div>
+            <div id="remaining-time">
+                <p><span class="label"></span> <span id="next-pray"></span></p>
+                <p class="time"><span id="remaining-clock"></span></p>
+            </div>
+        </div>
+        
+        <div class="Assumptions">
+            
+            <div class="fajr">
+                <p>Fajr</p>
+                <p id="fajr-time"></p>
+            </div>
+            <div class="sunrise">
+                <p>Sunrise</p>
+                <p id="sunrise-time"></p>
+            </div>
+            <div class="duhr">
+                <p>Dhuhr</p>
+                <p id="duhr-time"></p>
+            </div>
+            <div class="asr">
+                <p>Asr</p>
+                <p id="asr-time"></p>
+            </div>
+            <div class="maghreb">
+                <p>Maghrib</p>
+                <p id="maghreb-time"></p>
+            </div>
+            <div class="isha">
+                <p>Isha</p>
+                <p id="isha-time"></p>
+            </div>
+        </div>
+        
+        <div class="city" >
+            <select id="cities">
+                <option id="select-placeholder" value="" disabled selected>ismailia</option>
+            </select>
+        </div>
+        
+    </div>
+    <button id="lang-toggle">عربي</button>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
